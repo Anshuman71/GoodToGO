@@ -5,17 +5,23 @@ color:#3498db;
 
 */
 
-* {
+*,
+*::after,
+*::before {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
 }
 
 body {
   color: #777;
   font-family: 'Lato', sans-serif;
   font-weight: 400;
-  font-size: 16px;
+  box-sizing: border-box;
   line-height: 1.7;
 }
 
@@ -36,10 +42,10 @@ body {
 .heading {
   color: #fff;
   text-transform: uppercase;
-  font-size: 60px;
+  font-size: 6rem;
   font-weight: 600;
   animation: moveInLeft 1s;
-  letter-spacing: 15px;
+  letter-spacing: 1.5rem;
 }
 
 .text-box {
@@ -55,17 +61,19 @@ body {
   text-transform: uppercase;
   font-weight: 500;
   animation: moveInRight 1s;
-  letter-spacing: 10px;
-  margin-bottom: 30px;
+  letter-spacing: 1rem;
+  margin-bottom: 3rem;
 }
+
 .btn {
   display: inline-block;
-  width: 180px;
-  height: 50px;
+  width: 18rem;
+  font-size: 1.6rem;
+  height: 5rem;
   color: inherit;
   font-weight: 400;
   background-color: #fff;
-  padding: 10px 15px;
+  padding: 1rem 1.5rem;
   text-align: center;
   text-transform: uppercase;
   transition: all 0.4s;
@@ -100,22 +108,22 @@ btn:visited {
 }
 .btn:hover {
   transform: translateY(-3px);
-  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.6);
+  box-shadow: 0px 1rem 2rem rgba(0, 0, 0, 0.6);
 }
 
 .btn:active {
   transform: translateY(-1px);
-  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.6);
+  box-shadow: 0px 0.5rem 1rem rgba(0, 0, 0, 0.6);
 }
 
 @keyframes moveInLeft {
   0% {
     opacity: 0;
-    transform: translateX(-100px);
+    transform: translateX(-10rem);
   }
   80% {
     opacity: 0.8;
-    transform: translateX(20px);
+    transform: translateX(2rem);
   }
   100% {
     opacity: 1;
@@ -125,11 +133,11 @@ btn:visited {
 @keyframes moveInRight {
   0% {
     opacity: 0;
-    transform: translateX(100px);
+    transform: translateX(10rem);
   }
   80% {
     opacity: 0.8;
-    transform: translateX(-20px);
+    transform: translateX(-2rem);
   }
   100% {
     opacity: 1;
@@ -139,7 +147,7 @@ btn:visited {
 @keyframes moveUp {
   0% {
     opacity: 0;
-    transform: translateY(50px);
+    transform: translateY(5rem);
   }
   100% {
     opacity: 1;
@@ -149,22 +157,22 @@ btn:visited {
 
 /* about */
 .about {
-  height: 105vh;
   background-color: #f7f7f7;
   margin-top: -20vh;
+  padding: 20vh 0;
+  clip-path: polygon(0 20vh, 100vw 0, 100vw 100vh, 0 120vh);
 }
 
 .about-main {
   text-align: center;
-  padding-top: 25vh;
-  margin-bottom: 20px;
+  margin-bottom: 2rem;
 }
 
 .heading-about {
-  font-size: 40px;
+  font-size: 4rem;
   display: inline-block;
   font-weight: 500;
-  letter-spacing: 5px;
+  letter-spacing: 0.5rem;
   color: transparent;
   background-image: linear-gradient(to right bottom, #3b96d3, #01579b);
   -webkit-background-clip: text;
@@ -175,20 +183,21 @@ btn:visited {
 }
 .btn-secondary {
   display: inline-block;
-  width: 110px;
+  width: 11rem;
   font-weight: 600;
-  height: 35px;
+  height: 3.5rem;
+  margin: 1rem 10rem;
   color: #2980b9;
-  padding: 5px;
+  padding: 0.5rem;
   padding-top: 0px;
-  font-size: 20px;
+  font-size: 2rem;
   border-bottom: #2980b9 solid 3px;
   transition: all 0.4s;
 }
 .btn-secondary:hover {
   background: #2980b9;
   color: white;
-  box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.4);
+  box-shadow: 0px 1rem 1.5rem rgba(0, 0, 0, 0.4);
   transform: translateY(-3px);
 }
 .btn-secondary:active {
@@ -207,23 +216,22 @@ btn:visited {
   height: 100%;
 }
 .text h3 {
-  letter-spacing: 2px;
+  letter-spacing: 0.2rem;
   width: 100%;
   text-transform: capitalize;
   font-weight: 600;
   text-align: center;
-  font-size: 22px;
+  font-size: 2.2rem;
 }
 .describe {
   text-align: center;
-  padding: 10px;
-  font-size: 18px;
+  padding: 1rem;
+  font-size: 1.8rem;
   margin: 0 auto;
   width: 80%;
 }
 .images {
-  width: 40%;
-  height: 100%;
+  width: 30rem;
 }
 .composition {
   position: relative;
@@ -233,24 +241,23 @@ btn:visited {
 .composition-img {
   position: absolute;
   width: 50%;
-  height: 55%;
   transition: all 0.5s;
   background: white;
-  border-radius: 2px;
-  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.4);
+  border-radius: 0.2rem;
+  box-shadow: 0px 1rem 2rem rgba(0, 0, 0, 0.4);
 }
 .composition__img4 {
   left: 5%;
   top: 15%;
 }
 .composition__img2 {
-  left: 60%;
-  top: 75%;
+  left: 10%;
+  top: 45%;
   z-index: 3;
 }
 .composition__img3 {
-  left: 10%;
-  top: 70%;
+  left: -10%;
+  top: 40%;
   z-index: 1;
 }
 .composition__img1 {
@@ -262,26 +269,41 @@ btn:visited {
   transform: scale(1.2);
   z-index: 20;
 }
+/* features */
+.features {
+  height: 95vh;
+  position: relative;
+  background: linear-gradient(
+      to right bottom,
+      rgba(52, 152, 219, 0.5),
+      rgba(1, 88, 155, 0.9)
+    ),
+    url(./images/hero1.jpg);
+  background-size: cover;
+  background-position: top;
+  margin-top: -10vh;
+  clip-path: polygon(0 20vh, 100% 0, 100% 100vh, 0 100vh);
+}
 /* media queries */
-@media only screen and (max-width: 440px) {
+@media only screen and (max-width: 44rem) {
   .text-box {
     width: 100vw;
   }
   .heading {
-    font-size: 30px;
-    letter-spacing: 5px;
+    font-size: 3rem;
+    letter-spacing: 0.5rem;
   }
   .sub-heading {
-    font-size: 20px;
-    letter-spacing: 5px;
+    font-size: 2rem;
+    letter-spacing: 0.5rem;
   }
   .btn {
-    width: 150px;
-    height: 40px;
-    padding: 5px;
+    width: 15rem;
+    height: 4rem;
+    padding: 0.5rem;
   }
   .heading-about {
-    font-size: 28px;
+    font-size: 2.8rem;
   }
   .about {
     height: 200vh;
@@ -330,15 +352,15 @@ btn:visited {
     width: 100vw;
   }
   .heading {
-    font-size: 40px;
-    letter-spacing: 10px;
+    font-size: 4rem;
+    letter-spacing: 1rem;
   }
   .sub-heading {
-    font-size: 25px;
-    letter-spacing: 5px;
+    font-size: 2.5rem;
+    letter-spacing: 0.5rem;
   }
   .heading-about {
-    font-size: 35px;
+    font-size: 3.5rem;
   }
   .about {
     height: 180vh;
@@ -353,7 +375,7 @@ btn:visited {
   }
   .images {
     width: 100vw;
-    margin-top: 20px;
+    margin-top: 2rem;
   }
   .composition-img {
     width: 45%;
@@ -389,15 +411,15 @@ btn:visited {
     width: 60vw;
   }
   .heading {
-    font-size: 50px;
-    letter-spacing: 12px;
+    font-size: 5rem;
+    letter-spacing: 1.2rem;
   }
   .sub-heading {
-    font-size: 30px;
-    letter-spacing: 5px;
+    font-size: 3rem;
+    letter-spacing: 0.5rem;
   }
 }
-@media only screen and (min-width: 990px) and (max-width: 1440px) {
+@media only screen and (min-width: 990px) and (max-width: 144rem) {
   .text-box {
     width: 60vw;
   }
