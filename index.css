@@ -48,7 +48,7 @@ body {
   letter-spacing: 1.5rem;
 }
 
-.text-box {
+.header__text-box {
   position: absolute;
   top: 40%;
   left: 50%;
@@ -159,11 +159,13 @@ btn:visited {
 .about {
   background-color: #f7f7f7;
   margin-top: -20vh;
-  padding: 20vh 0;
-  clip-path: polygon(0 20vh, 100vw 0, 100vw 100vh, 0 120vh);
+  padding-top: 20vh;
+  min-height: 80rem;
+  overflow: hidden;
+  clip-path: polygon(0 20vh, 100vw 0, 100vw 120vh, 0 120vh);
 }
 
-.about-main {
+.about__main {
   text-align: center;
   margin-bottom: 2rem;
 }
@@ -177,8 +179,9 @@ btn:visited {
   background-image: linear-gradient(to right bottom, #3b96d3, #01579b);
   -webkit-background-clip: text;
 }
-.about-content {
+.about__content {
   display: flex;
+  justify-content: space-around;
   height: 50%;
 }
 .btn-secondary {
@@ -207,7 +210,7 @@ btn:visited {
 .btn-secondary:visited {
   text-decoration: none;
 }
-.text {
+.about__content__text {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -215,7 +218,7 @@ btn:visited {
   width: 50%;
   height: 100%;
 }
-.text h3 {
+.about__content__text h3 {
   letter-spacing: 0.2rem;
   width: 100%;
   text-transform: capitalize;
@@ -231,62 +234,29 @@ btn:visited {
   width: 80%;
 }
 .images {
-  width: 30rem;
+  width: 40rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-content: center;
 }
-.composition {
-  position: relative;
-  width: 100%;
-  height: 100%;
-}
-.composition-img {
-  position: absolute;
-  width: 50%;
+.image__composition {
+  width: 15rem;
+  height: 15rem;
+  margin-bottom: 2rem;
   transition: all 0.5s;
   background: white;
-  border-radius: 0.2rem;
+  border-radius: 0.4rem;
   box-shadow: 0px 1rem 2rem rgba(0, 0, 0, 0.4);
 }
-.composition__img4 {
-  left: 5%;
-  top: 15%;
-}
-.composition__img2 {
-  left: 10%;
-  top: 45%;
-  z-index: 3;
-}
-.composition__img3 {
-  left: -10%;
-  top: 40%;
-  z-index: 1;
-}
-.composition__img1 {
-  left: 50%;
-  top: 25%;
-  z-index: 2;
-}
-.composition-img:hover {
+.image__composition:hover {
   transform: scale(1.2);
   z-index: 20;
 }
-/* features */
-.features {
-  height: 95vh;
-  position: relative;
-  background: linear-gradient(
-      to right bottom,
-      rgba(52, 152, 219, 0.5),
-      rgba(1, 88, 155, 0.9)
-    ),
-    url(./images/hero1.jpg);
-  background-size: cover;
-  background-position: top;
-  margin-top: -10vh;
-  clip-path: polygon(0 20vh, 100% 0, 100% 100vh, 0 100vh);
-}
+
 /* media queries */
 @media only screen and (max-width: 44rem) {
-  .text-box {
+  .header__text-box {
     width: 100vw;
   }
   .heading {
@@ -308,39 +278,19 @@ btn:visited {
   .about {
     height: 200vh;
   }
-  .about-content {
+  .about__content {
     flex-wrap: wrap;
-    height: 100vh;
   }
-  .text {
+  .image__composition {
+    width: 10rem;
+    height: 10rem;
+  }
+  .about__content__text {
     width: 100vw;
     height: auto;
   }
   .images {
     width: 100vw;
-  }
-  .composition-img {
-    width: 45%;
-    height: 30%;
-  }
-  .composition__img4 {
-    left: 3%;
-    top: 0%;
-  }
-  .composition__img2 {
-    left: 50%;
-    top: 35%;
-    z-index: 3;
-  }
-  .composition__img3 {
-    left: 3%;
-    top: 35%;
-    z-index: 1;
-  }
-  .composition__img1 {
-    left: 50%;
-    top: 0%;
-    z-index: 2;
   }
   .describe {
     width: 90vw;
@@ -348,7 +298,7 @@ btn:visited {
   }
 }
 @media only screen and (min-width: 441px) and (max-width: 786px) {
-  .text-box {
+  .header__text-box {
     width: 100vw;
   }
   .heading {
@@ -365,40 +315,17 @@ btn:visited {
   .about {
     height: 180vh;
   }
-  .about-content {
+  .about__content {
     flex-wrap: wrap;
     height: 100vh;
   }
-  .text {
+  .about__content__text {
     width: 100vw;
     height: auto;
   }
   .images {
     width: 100vw;
     margin-top: 2rem;
-  }
-  .composition-img {
-    width: 45%;
-    height: 30%;
-  }
-  .composition__img4 {
-    left: 3%;
-    top: 0%;
-  }
-  .composition__img2 {
-    left: 50%;
-    top: 35%;
-    z-index: 3;
-  }
-  .composition__img3 {
-    left: 3%;
-    top: 35%;
-    z-index: 1;
-  }
-  .composition__img1 {
-    left: 50%;
-    top: 0%;
-    z-index: 2;
   }
   .describe {
     width: 70vw;
@@ -407,7 +334,7 @@ btn:visited {
 }
 
 @media only screen and (min-width: 787px) and (max-width: 989px) {
-  .text-box {
+  .header__text-box {
     width: 60vw;
   }
   .heading {
@@ -420,7 +347,7 @@ btn:visited {
   }
 }
 @media only screen and (min-width: 990px) and (max-width: 144rem) {
-  .text-box {
+  .header__text-box {
     width: 60vw;
   }
 }
