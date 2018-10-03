@@ -4,7 +4,6 @@ color:#2980b9;
 color:#3498db;
 
 */
-
 *,
 *::after,
 *::before {
@@ -31,7 +30,7 @@ body {
   background: linear-gradient(
       to right bottom,
       rgba(52, 152, 219, 0.5),
-      rgba(1, 88, 155, 0.9)
+      rgba(1, 87, 155, 0.9)
     ),
     url(./images/hero.jpg);
   background-size: cover;
@@ -56,6 +55,7 @@ body {
   transform: translate(-50%, -50%);
   text-align: center;
 }
+
 .sub-heading {
   color: #fff;
   text-transform: uppercase;
@@ -101,11 +101,13 @@ btn:visited {
   z-index: -1;
   transition: all 0.4s;
 }
+
 .btn:hover::after {
   background-color: #fff;
   transform: scale(1.5);
   opacity: 0;
 }
+
 .btn:hover {
   transform: translateY(-3px);
   box-shadow: 0px 1rem 2rem rgba(0, 0, 0, 0.6);
@@ -130,6 +132,7 @@ btn:visited {
     transform: translateX(0px);
   }
 }
+
 @keyframes moveInRight {
   0% {
     opacity: 0;
@@ -144,6 +147,7 @@ btn:visited {
     transform: translateX(0px);
   }
 }
+
 @keyframes moveUp {
   0% {
     opacity: 0;
@@ -160,8 +164,6 @@ btn:visited {
   background-color: #f7f7f7;
   margin-top: -20vh;
   padding-top: 20vh;
-  min-height: 80rem;
-  overflow: hidden;
   clip-path: polygon(0 20vh, 100vw 0, 100vw 120vh, 0 120vh);
 }
 
@@ -179,11 +181,13 @@ btn:visited {
   background-image: linear-gradient(to right bottom, #3b96d3, #01579b);
   -webkit-background-clip: text;
 }
+
 .about__content {
   display: flex;
   justify-content: space-around;
   height: 50%;
 }
+
 .btn-secondary {
   display: inline-block;
   width: 11rem;
@@ -197,19 +201,23 @@ btn:visited {
   border-bottom: #2980b9 solid 3px;
   transition: all 0.4s;
 }
+
 .btn-secondary:hover {
   background: #2980b9;
   color: white;
   box-shadow: 0px 1rem 1.5rem rgba(0, 0, 0, 0.4);
   transform: translateY(-3px);
 }
+
 .btn-secondary:active {
   transform: translateY(-1px);
 }
+
 .btn-secondary:link,
 .btn-secondary:visited {
   text-decoration: none;
 }
+
 .about__content__text {
   display: flex;
   flex-wrap: wrap;
@@ -218,6 +226,7 @@ btn:visited {
   width: 50%;
   height: 100%;
 }
+
 .about__content__text h3 {
   letter-spacing: 0.2rem;
   width: 100%;
@@ -226,6 +235,7 @@ btn:visited {
   text-align: center;
   font-size: 2.2rem;
 }
+
 .describe {
   text-align: center;
   padding: 1rem;
@@ -233,6 +243,7 @@ btn:visited {
   margin: 0 auto;
   width: 80%;
 }
+
 .images {
   width: 40rem;
   display: flex;
@@ -240,6 +251,7 @@ btn:visited {
   justify-content: space-around;
   align-content: center;
 }
+
 .image__composition {
   width: 15rem;
   height: 15rem;
@@ -249,13 +261,14 @@ btn:visited {
   border-radius: 0.4rem;
   box-shadow: 0px 1rem 2rem rgba(0, 0, 0, 0.4);
 }
+
 .image__composition:hover {
   transform: scale(1.2);
   z-index: 20;
 }
 
 /* media queries */
-@media only screen and (max-width: 44rem) {
+@media only screen and (max-width: 48rem) {
   .header__text-box {
     width: 100vw;
   }
@@ -276,14 +289,14 @@ btn:visited {
     font-size: 2.8rem;
   }
   .about {
-    height: 200vh;
+    clip-path: none;
   }
   .about__content {
-    flex-wrap: wrap;
+    flex-direction: column;
   }
   .image__composition {
-    width: 10rem;
-    height: 10rem;
+    width: 9rem;
+    height: 9rem;
   }
   .about__content__text {
     width: 100vw;
@@ -297,13 +310,17 @@ btn:visited {
     text-align: center;
   }
 }
-@media only screen and (min-width: 441px) and (max-width: 786px) {
+
+@media only screen and (min-width: 480px) and (max-width: 786px) {
   .header__text-box {
     width: 100vw;
   }
   .heading {
     font-size: 4rem;
     letter-spacing: 1rem;
+  }
+  .about {
+    clip-path: none;
   }
   .sub-heading {
     font-size: 2.5rem;
@@ -312,23 +329,21 @@ btn:visited {
   .heading-about {
     font-size: 3.5rem;
   }
-  .about {
-    height: 180vh;
-  }
   .about__content {
-    flex-wrap: wrap;
-    height: 100vh;
+    flex-direction: column;
   }
   .about__content__text {
     width: 100vw;
-    height: auto;
   }
   .images {
     width: 100vw;
     margin-top: 2rem;
   }
+  .image__composition {
+    width: 11rem;
+    height: 11rem;
+  }
   .describe {
-    width: 70vw;
     text-align: center;
   }
 }
@@ -346,6 +361,7 @@ btn:visited {
     letter-spacing: 0.5rem;
   }
 }
+
 @media only screen and (min-width: 990px) and (max-width: 144rem) {
   .header__text-box {
     width: 60vw;
