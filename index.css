@@ -268,7 +268,7 @@ btn:visited {
 }
 
 /* media queries */
-@media only screen and (max-width: 48rem) {
+@media only screen and (max-width: 439px) {
   .header__text-box {
     width: 100vw;
   }
@@ -295,15 +295,16 @@ btn:visited {
     flex-direction: column;
   }
   .image__composition {
-    width: 9rem;
-    height: 9rem;
+    width: 10rem;
+    height: 10rem;
   }
   .about__content__text {
     width: 100vw;
     height: auto;
   }
   .images {
-    width: 100vw;
+    margin: 0 auto;
+    width: 70vw;
   }
   .describe {
     width: 90vw;
@@ -311,7 +312,7 @@ btn:visited {
   }
 }
 
-@media only screen and (min-width: 480px) and (max-width: 786px) {
+@media only screen and (min-width: 440px) and (max-width: 786px) {
   .header__text-box {
     width: 100vw;
   }
