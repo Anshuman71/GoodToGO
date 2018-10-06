@@ -10,6 +10,8 @@
 @import 'layout/header';
 
 @import 'components/button';
+@import 'components/image-composition';
+@import 'components/feature-box';
 
 @import 'pages/home';
 
@@ -74,6 +76,13 @@ body {
     width: 90vw;
     text-align: center;
   }
+  .features {
+    justify-content: space-around;
+    padding: 10rem 2rem;
+  }
+  .features__box {
+    flex: 1 1 28rem;
+  }
 }
 
 @media only screen and (min-width: 440px) and (max-width: 786px) {
@@ -111,6 +120,14 @@ body {
   .describe {
     text-align: center;
   }
+  .features {
+    justify-content: space-around;
+    padding: 10rem 5rem;
+  }
+
+  .features__box {
+    flex: 1 1 28rem;
+  }
 }
 
 @media only screen and (min-width: 787px) and (max-width: 989px) {
@@ -125,10 +142,16 @@ body {
     font-size: 3rem;
     letter-spacing: 0.5rem;
   }
+  .features {
+    padding: 15rem 3rem;
+  }
 }
 
 @media only screen and (min-width: 990px) and (max-width: 144rem) {
   .header__text-box {
     width: 60vw;
+  }
+  .features {
+    padding: 20rem 5rem;
   }
 }

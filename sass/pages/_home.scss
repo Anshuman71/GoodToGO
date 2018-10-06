@@ -1,23 +1,13 @@
 .about {
-  background-color: #f7f7f7;
+  background-color: $background-faded;
   margin-top: -20vh;
-  padding: 25rem 0;
+  padding: 20rem 0;
   clip-path: polygon(0 20vh, 100vw 0, 100vw 120vh, 0 120vh);
 }
 
 .about__main {
   text-align: center;
   margin-bottom: 2rem;
-}
-
-.heading-about {
-  font-size: 4rem;
-  display: inline-block;
-  font-weight: 600;
-  letter-spacing: 0.5rem;
-  color: transparent;
-  background-image: linear-gradient(to right bottom, $primary-light, $primary);
-  -webkit-background-clip: text;
 }
 
 .about__content {
@@ -43,32 +33,24 @@
   }
 }
 
-.describe {
-  text-align: center;
-  padding: 1rem;
-  font-size: 1.8rem;
-  margin: 0 auto;
-  width: 80%;
-}
-
-.images {
-  width: 40rem;
+//features
+.features {
+  margin-top: -10rem;
+  padding: 20rem 10rem;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
-  align-content: center;
-}
-
-.image__composition {
-  width: 15rem;
-  height: 15rem;
-  margin-bottom: 2rem;
-  transition: all 0.5s;
-  background: white;
-  border-radius: 0.4rem;
-  box-shadow: 0px 1rem 2rem rgba($shadow, 0.4);
-  &:hover {
-    transform: scale(1.2);
-    z-index: 20;
+  justify-content: space-evenly;
+  align-items: stretch;
+  background: linear-gradient(
+      to right,
+      rgba($primary-light, 0.6),
+      rgba($primary, 0.9)
+    ),
+    url('../../images/hero1.jpg');
+  background-size: cover;
+  background-position: top;
+  transform: skewY(-7deg);
+  & > * {
+    transform: skewY(7deg);
   }
 }

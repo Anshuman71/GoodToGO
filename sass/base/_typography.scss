@@ -5,3 +5,38 @@ body {
   line-height: 1.7;
   box-sizing: border-box;
 }
+.heading-about {
+  font-size: 4rem;
+  display: inline-block;
+  font-weight: 600;
+  letter-spacing: 0.5rem;
+  color: transparent;
+  background-image: linear-gradient(to right bottom, $primary-light, $primary);
+  -webkit-background-clip: text;
+}
+
+.heading {
+  color: $background;
+  text-transform: uppercase;
+  font-size: 6rem;
+  font-weight: 600;
+  animation: moveInLeft 1s;
+  letter-spacing: 1.5rem;
+}
+
+.describe {
+  text-align: center;
+  padding: 1rem;
+  font-size: 1.8rem;
+  margin: 0 auto;
+  width: 80%;
+}
+
+.sub-heading {
+  color: $background;
+  text-transform: uppercase;
+  font-weight: 500;
+  animation: moveInRight 1s;
+  letter-spacing: 1rem;
+  margin-bottom: 3rem;
+}

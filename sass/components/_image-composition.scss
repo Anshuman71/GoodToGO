@@ -1,0 +1,21 @@
+.images {
+  width: 40rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-content: center;
+}
+
+.image__composition {
+  width: 15rem;
+  height: 15rem;
+  margin-bottom: 2rem;
+  transition: all 0.5s;
+  background: white;
+  border-radius: 0.4rem;
+  box-shadow: 0px 1rem 2rem rgba($shadow, 0.4);
+  &:hover {
+    transform: scale(1.2);
+    z-index: 20;
+  }
+}
