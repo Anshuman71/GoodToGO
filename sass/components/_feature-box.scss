@@ -1,6 +1,6 @@
 .features__box {
   flex: 0 1 28rem;
-  margin-bottom: 2rem;
+  margin-bottom: 2.5rem;
   padding: 2rem 1rem;
   background-color: rgba($background, $alpha: 0.8);
   border-radius: 5px;
@@ -37,6 +37,6 @@
     padding: 0.5rem;
   }
   &:hover {
-    transform: skewY(7deg) translateY(-1.5rem) scaleY(1.05);
+    transform: skewY(7deg) scaleY(1.05) translateY(-1.5rem);
   }
 }

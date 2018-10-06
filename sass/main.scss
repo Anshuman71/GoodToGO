@@ -8,6 +8,7 @@
 @import 'base/utilities';
 
 @import 'layout/header';
+@import 'layout/footer';
 
 @import 'components/button';
 @import 'components/image-composition';
@@ -54,6 +55,9 @@ body {
   .heading-about {
     font-size: 2.8rem;
   }
+  .header__logo {
+    left: 4rem;
+  }
   .about {
     clip-path: none;
   }
@@ -61,8 +65,8 @@ body {
     flex-direction: column;
   }
   .image__composition {
-    width: 10rem;
-    height: 10rem;
+    width: 11rem;
+    height: 11rem;
   }
   .about__content__text {
     width: 100vw;
@@ -88,6 +92,9 @@ body {
 @media only screen and (min-width: 440px) and (max-width: 786px) {
   .header__text-box {
     width: 100vw;
+  }
+  .header__logo {
+    left: 6rem;
   }
   .heading {
     font-size: 4rem;
