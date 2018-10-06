@@ -81,6 +81,12 @@ body {
     backface-visibility: hidden;
     transform: translate(-50%, -50%);
     text-align: center; }
+  .header__logo {
+    font-size: 6rem;
+    top: 4rem;
+    left: 10rem;
+    color: white;
+    position: absolute; }
 
 .btn {
   display: inline-block;
