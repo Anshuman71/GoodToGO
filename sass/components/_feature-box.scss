@@ -37,6 +37,6 @@
     padding: 0.5rem;
   }
   &:hover {
-    transform: translateY(-1.5rem) scaleY(1.05) skewY(7deg);
+    transform: skewY(7deg) translateY(-1.5rem) scaleY(1.05);
   }
 }

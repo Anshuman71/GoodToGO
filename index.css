@@ -189,7 +189,7 @@ body {
   .features__box--describe {
     padding: 0.5rem; }
   .features__box:hover {
-    transform: translateY(-1.5rem) scaleY(1.05) skewY(7deg); }
+    transform: skewY(7deg) translateY(-1.5rem) scaleY(1.05); }
 
 .about {
   background-color: #f7f7f7;
@@ -316,7 +316,7 @@ body {
     justify-content: space-around;
     padding: 10rem 5rem; }
   .features__box {
-    flex: 1 1 28rem; } }
+    flex: 0 1 50rem; } }
 
 @media only screen and (min-width: 787px) and (max-width: 989px) {
   .header__text-box {
